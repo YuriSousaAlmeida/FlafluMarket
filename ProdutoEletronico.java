@@ -1,11 +1,11 @@
 public class ProdutoEletronico extends Produto{
-    private String garantia;
+    private int garantia;
 
-    public String getGarantia() {
+    public int getGarantia() {
         return garantia;
     }
 
-    public void setGarantia(String garantia) {
+    public void setGarantia(int garantia) {
         this.garantia = garantia;
     }
 }

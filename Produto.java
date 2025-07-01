@@ -1,4 +1,5 @@
 public abstract class Produto {
+    private int qtd;
     private String nome;
     private double valor;
     private String codigo;
@@ -35,5 +36,13 @@ public abstract class Produto {
 
     public void setCodigo(String codigo) {
         this.codigo = codigo;
+    }
+
+    public int getQtd() {
+        return qtd;
+    }
+
+    public void setQtd(int qtd) {
+        this.qtd = qtd;
     }
 }
