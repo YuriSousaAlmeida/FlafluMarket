@@ -5,7 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Sistema sistema = new Sistema();
         Produto[] produtos = new Produto[10];
-        //Venda[] vendas = new Venda[10];
+        Venda[] vendas = new Venda[10];
         int qtdProdutos=0;
         int qtdVendas=0;
 
@@ -24,23 +24,35 @@ public class Main {
                 case 1:
                     sistema.cadastrarProdutoEletronico(produtos);
                     for(int i=0; i < produtos.length; i++){
-                        System.out.println(produtos[i].getNome());
+                        if (produtos[i]!=null)
+                        System.out.println(produtos[i].toString());
                     }
                     break;
                 case 2:
-                    //cadastrarProdutoAlimenticio();
+                    sistema.cadastrarProdutoAlimenticio(produtos);
+                    for (int i=0;i<produtos.length;i++){
+                        if (produtos[i]!=null)
+                        System.out.println(produtos[i].toString());
+                    }
                     break;
                 case 3:
-                    //listarProdutos();
+                    sistema.listarProdutos(produtos);
                     break;
                 case 4:
-                    //realizarVenda();
+                    sistema.listarProdutos(produtos);
+                    System.out.println("digite um produto para vender");
+                    sc.nextLine();
+                    String nome = sc.nextLine();
+                    System.out.println("digite a quantidade de produtos do tipo para vender");
+                    int quantidade = sc.nextInt();
+                    sc.nextLine();
+                    sistema.realizarVenda(nome, produtos, vendas); //falta mexer nas quantidades
                     break;
                 case 5:
-                    //listarVendas();
+                    sistema.listarVendas(vendas);
                     break;
                 case 6:
-                    //pesquisarProduto();
+                    //sistema.pesquisarProduto();
                     break;
                 case 0:
                     System.out.println("Saindo...");

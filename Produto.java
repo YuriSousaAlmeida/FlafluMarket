@@ -8,10 +8,11 @@ public abstract class Produto {
 
     }
 
-    public Produto(String nome, double valor, String codigo) {
+    public Produto(String nome, double valor, String codigo,int qtd) {
         this.nome = nome;
         this.valor = valor;
         this.codigo = codigo;
+        this.qtd = qtd;
     }
 
     public String getNome() {
@@ -44,5 +45,10 @@ public abstract class Produto {
 
     public void setQtd(int qtd) {
         this.qtd = qtd;
+    }
+
+    @Override
+    public String toString(){
+        return ("Produto: " + getNome() + ", " + getValor()+ ", " + getCodigo()+ ", " + getQtd());
     }
 }
