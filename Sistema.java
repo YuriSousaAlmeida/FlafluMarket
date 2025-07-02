@@ -95,4 +95,18 @@ public class Sistema {
             }
         }
     }
+
+    public void procurarProduto(Produto[] produtos){
+        System.out.println("digite um nome para ser buscado");
+        Scanner sc = new Scanner(System.in);
+        String auxNome=sc.nextLine();
+        for (int i=0;i<produtos.length;i++){
+            if (produtos[i] != null && produtos[i].getNome().equalsIgnoreCase(auxNome)){
+                System.out.println("Produdo encontrado!");
+                System.out.println(produtos[i]);
+                break;
+            }
+        }
+    }
 }
+

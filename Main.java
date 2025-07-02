@@ -52,7 +52,7 @@ public class Main {
                     sistema.listarVendas(vendas);
                     break;
                 case 6:
-                    //sistema.pesquisarProduto();
+                    sistema.procurarProduto(produtos);
                     break;
                 case 0:
                     System.out.println("Saindo...");
