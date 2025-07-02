@@ -49,6 +49,6 @@ public abstract class Produto {
 
     @Override
     public String toString(){
-        return ("Produto: " + getNome() + ", " + getValor()+ ", " + getCodigo()+ ", " + getQtd());
+        return ("Produto: " + "Nome: " + getNome() + ", " + "valor: " + getValor()+ ", " + "código: " + getCodigo()+ ", " + "quantidade" + getQtd());
     }
 }

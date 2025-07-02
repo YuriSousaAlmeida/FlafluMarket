@@ -22,7 +22,7 @@ public class ProdutoEletronico extends Produto{
     }
     @Override
     public String toString(){
-        return (super.toString()+ ", " + garantia);
+        return (super.toString()+ ", " + "validade: " + garantia + " meses");
     }
     }
 

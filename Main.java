@@ -43,9 +43,6 @@ public class Main {
                     System.out.println("digite um produto para vender");
                     sc.nextLine();
                     String nome = sc.nextLine();
-                    System.out.println("digite a quantidade de produtos do tipo para vender");
-                    int quantidade = sc.nextInt();
-                    sc.nextLine();
                     sistema.realizarVenda(nome, produtos, vendas); //falta mexer nas quantidades
                     break;
                 case 5:

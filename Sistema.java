@@ -77,9 +77,16 @@ public class Sistema {
         int qtdVendida = sc.nextInt();
 
         for (int i = 0; i < vendas.length; i++) {
-            if (vendas[i] == null) {
+            if (vendas[i] == null && p.getQtd()>qtdVendida) {
+                vendas[i] = new Venda(p, qtdVendida);
+                produtos[i].setQtd(p.getQtd()-qtdVendida);
+                System.out.println("Venda registrada com sucesso!");
+                return;
+            }
+            else if (vendas[i] == null && p.getQtd()==qtdVendida){
                 vendas[i] = new Venda(p, qtdVendida);
                 System.out.println("Venda registrada com sucesso!");
+                produtos[i]=null;
                 return;
             }
         }
@@ -109,4 +116,3 @@ public class Sistema {
         }
     }
 }
-

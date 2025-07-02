@@ -22,6 +22,6 @@ public class ProdutoAlimenticio extends Produto{
     }
     @Override
     public String toString(){
-        return (super.toString()+ " ," + validade);
+        return (super.toString() + " ," + "validade: " + validade);
     }
 }
